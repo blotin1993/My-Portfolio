@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="My portfolio">
+	<main>
+		<h1>Gonzalo Blotta</h1>
+		<h2><code><span class="text-gradient">Full-stack Developer</span></code></h2>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/me"
+				title="About me"
+				body="My path to becoming a full-stack developer."
+			/>
+			<Card
+				href="https://linktr.ee/gonzaloblotta"
+				title="Social media"
+				body="Here you'll find all my social media links."
+				rel="noopener noreferrer"
+				target="_blank"
+			/>
+			<Card
+				href="/portfolio"
+				title="Work experience"
+				body="Professional experience as a developer."
+			/>
+			<Card
+				href="mailto:blottagonzalo@gmail.com"
+				title="Contact me"
+				body="Send me an email and let's chat!"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0;
+	}
+
+	h2 {
+		display: flex;
+		justify-content: center;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background: #4f39fa;
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
