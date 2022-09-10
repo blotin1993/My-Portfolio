@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GoBackButton from '../components/GoBackButton.astro';
+---
+
+<Layout title="About me">
+	<header>
+		<GoBackButton/>
+	</header>
+	<main>
+		<h1>About me</h1>
+	</main>
+</Layout>
+
+<style>
+	h1 {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+
+	header {
+		display: flex;
+		justify-content: flex-start;
+		margin: 0 1rem;
+	}
+</style>
