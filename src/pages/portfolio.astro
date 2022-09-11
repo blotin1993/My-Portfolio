@@ -1,21 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GoBackButton from '../components/GoBackButton.astro';
+import WorkingExperienceCard from '../components/WorkingExperienceCard.astro';
 ---
 
 <Layout title="My portfolio">
 	<header>
-		<GoBackButton/>
+		<img src="../github.png" alt="My github contributions last year" width="100%">
 	</header>
 	<main>
+		<GoBackButton/>
 		<h1>Working experience</h1>
+		<WorkingExperienceCard/>
 	</main>
 </Layout>
 
 <style>
 	h1 {
 		display: flex;
-		justify-content: center;
 		margin: 1rem 0;
 	}
 
@@ -25,9 +27,17 @@ import GoBackButton from '../components/GoBackButton.astro';
 		max-width: 60ch;
 	}
 
+	img {
+		border-radius: 0.25rem;
+	}
+
 	header {
 		display: flex;
 		justify-content: flex-start;
 		margin: 0 1rem;
+	}
+
+	img {
+		margin: 1rem auto;
 	}
 </style>

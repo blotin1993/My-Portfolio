@@ -1,0 +1,12 @@
+.WorkingExperienceCardItem {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    
+    &__Item {
+        flex-grow: 1;
+        border: 2px solid #4f39fa;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+    }
+}
