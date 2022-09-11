@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GoBackButton from '../components/GoBackButton.astro';
+import WorkExperienceCard from '../components/WorkExperienceCard.astro';
 ---
 
 <Layout title="My portfolio">
@@ -8,7 +9,21 @@ import GoBackButton from '../components/GoBackButton.astro';
 		<GoBackButton/>
 	</header>
 	<main>
-		<h1>Working experience</h1>
+		<h1>Work experience</h1>
+		<ul>
+			<WorkExperienceCard
+				title="Xoor"
+				body="Full-stack Developer"
+			/>
+			<WorkExperienceCard
+				title="SimTLix"
+				body="Backend Developer"
+			/>
+			<WorkExperienceCard
+				title="Avalith"
+				body="Backend Developer"
+			/>
+		</ul>
 	</main>
 </Layout>
 
